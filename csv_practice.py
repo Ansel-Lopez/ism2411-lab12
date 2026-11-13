@@ -97,7 +97,7 @@ with open("data/sales.csv", "r") as file:
         else:
             product_totals[product] = total
 
-for product in product_totals:
+for product in sorted(product_totals):
     print(f"{product}: ${product_totals[product]:.2f}")
 
 
