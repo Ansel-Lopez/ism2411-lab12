@@ -1,5 +1,7 @@
 import csv
 
+from datetime import datetime
+
 with open("data/sales.csv", "r") as file:
     reader = csv.reader(file)
 
@@ -87,3 +89,13 @@ with open("data/sales.csv", "r") as file:
 
 for product in product_totals:
     print(f"{product}: ${product_totals[product]:.2f}")
+
+
+# Exercise 8: Append mode log
+now = datetime.now()
+
+with open("data/run_log.txt", "a") as file:
+    file.write(f"{now}: Total Revenue = ${total_revenue:.2f}\n")
+
+print("Run log updated.")
+
