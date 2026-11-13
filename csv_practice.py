@@ -1,3 +1,13 @@
+
+# --- Reflection Questions ---
+# 1. Python makes it easier to automate repetitive tasks like reading
+#    and cleaning large CSV files. Excel is easier for quickly viewing
+#    data, making changes manually, and creating charts.
+# 2. A business could use an append mode log to track daily sales.
+#    Append mode is useful because it adds new records without
+#    deleting the previous sales information.
+
+
 import csv
 
 from datetime import datetime
