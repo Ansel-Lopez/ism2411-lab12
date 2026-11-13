@@ -68,3 +68,22 @@ with open("data/sales.csv", "r") as file:
         print(f"{product}: ${total:.2f}")
 
 print(f"Total Revenue: ${total_revenue:.2f}")
+
+product_totals = {}
+
+with open("data/sales.csv", "r") as file:
+    reader = csv.DictReader(file)
+
+    for row in reader:
+        product = row["product"]
+        price = float(row["price"])
+        quantity = int(row["quantity"])
+        total = price * quantity
+
+        if product in product_totals:
+            product_totals[product] += total
+        else:
+            product_totals[product] = total
+
+for product in product_totals:
+    print(f"{product}: ${product_totals[product]:.2f}")
